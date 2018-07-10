@@ -5,7 +5,7 @@ describe 'a user' do
   it 'can see the name of a single student' do
     student = Student.create!(name: 'Emmie Hayes')
 
-    visit student_path
+    visit student_path(student)
 
     expect(page).to have_content(student.name)
     end
