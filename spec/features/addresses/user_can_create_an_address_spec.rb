@@ -11,7 +11,7 @@
 
 require 'rails_helper'
 
-xdescribe 'a user' do
+describe 'a user' do
   context 'visting new_student_address_path' do
   it 'can create a new address' do
     student = Student.create!(name: 'Emmie Hayes')
