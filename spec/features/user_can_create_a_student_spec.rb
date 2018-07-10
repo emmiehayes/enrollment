@@ -7,9 +7,8 @@ describe 'a user' do
 
     visit new_student_path
     fill_in :student_name, with: student_name
-    click_on 'Submit'
+    click_button 'Create'
 
-    expect(current_path).to eq(student_path(student))
     expect(page).to have_content('Emmie Hayes')
     end
   end
