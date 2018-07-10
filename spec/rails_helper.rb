@@ -27,7 +27,6 @@ RSpec.configure do |config|
       example.run
     end
   end
-
 end
 # Add additional requires below this line. Rails is not loaded until this point!
 
