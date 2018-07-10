@@ -1,4 +1,14 @@
 <h1>Student</h1>
 <h3><%=@student.name%></h3>
+
+<h4> Addresses for <%=@student.name%> </h4>
+<%@student.addresses.each do |address|%>
+  <%= address.description %>
+  <%= address.street %>
+  <%= address.city %>
+  <%= address.state %>
+  <%= address.zip_code %>
+<% end %>
+
 <p><%= link_to "See All Students", students_path%></p>
 <p><%= link_to "Create New Student", new_student_path%></p>
