@@ -41,6 +41,7 @@ group :development, :test do
   gem 'active_designer'
   gem 'database_cleaner'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'simplecov'
 end
 
 group :development do
