@@ -1,4 +1,9 @@
 require 'rails_helper'
-# As a user
-# When I visit `/students`
-# I see a list of student names
+describe 'a user' do
+  context 'visting /students' do  #replace with route once in config
+  it 'can see a list of all students' do
+
+
+    end
+  end
+end
