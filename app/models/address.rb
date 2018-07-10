@@ -1,3 +1,3 @@
 class Address < ApplicationRecord
-  validates_presence_of :description, :street, :city, :state, :zipcode
+  validates_presence_of :description, :street, :city, :state, :zip_code
 end
