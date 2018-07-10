@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 describe 'a user' do
-  context 'visting /students/:id' do  #############replace with route once in config
+  context 'visting student_path' do
   it 'can see the name of a single student' do
-    student = Student.create!(name: '')
+    student = Student.create!(name: 'Emmie Hayes')
 
+    visit student_path
 
+    expect(page).to have_content(student.name)
     end
   end
 end

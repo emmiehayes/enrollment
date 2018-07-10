@@ -1,7 +1,16 @@
 require 'rails_helper'
-# As a user
-# When I visit `/students/new`
-# And I fill in name
-# And I click submit
-# I am on the student show page
-# And I see that student's name
+
+describe 'a user' do
+  context 'visting new_student_path' do
+  it 'can fill out a form to create a new student' do
+    student_name = "Emmie Hayes"
+
+    visit new_student_path
+    fill_in :student_name, with: student_name
+    click_on 'Submit'
+
+    expect(current_path).to eq(student_path(student))
+    expect(page).to have_content('Emmie Hayes')
+    end
+  end
+end
