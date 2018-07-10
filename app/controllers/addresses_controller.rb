@@ -13,5 +13,3 @@ class AddressesController < ApplicationController
     params.require(:address).permit(:content)
   end
 end
-
-end
