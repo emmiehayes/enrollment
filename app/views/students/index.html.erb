@@ -4,3 +4,6 @@
   <%=  student.name %>
   <%= link_to "Delete", student_path(student), method: "delete" %>
   <% end %>
+  
+<p><%= link_to "See All Students", students_path%></p>
+<p><%= link_to "Create New Student", new_student_path%></p>
