@@ -23,6 +23,6 @@ describe 'relationships' do
     student = Student.create!(name: 'Emmie Hayes')
     address = Address.create!(description: 'Main House', street: '123 Main Street', city: 'Denver', state: 'Colorado', zip_code: '83428', student_id: student.id)
 
-    expect(addresses).to respond_to(:students)
+    expect(address).to respond_to(:student)
   end
 end
