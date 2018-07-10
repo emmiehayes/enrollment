@@ -36,27 +36,40 @@ describe 'a user' do
   end
 end
 
-xdescribe 'a user' do
+describe 'a user' do
   context 'visting edit page at edit_student_path' do
     it 'can see the name of a single student' do
-      student = Student.create!(name: 'Emmie Hayes')
+      student_1 = Student.create!(name: 'Emmie Hayes')
+      student_2 = Student.create!(name: 'Michelle Obama')
 
-      visit student_path(student)
+      visit edit_student_path(student_1)
 
-      expect(page).to have_content(student.name)
+      click_link 'Create New Student'
+      expect(current_path).to eq(new_student_path)
+
+      click_link 'See All Students'
+      expect(current_path).to eq(students_path)
+      expect(page).to have_content('Emmie Hayes')
+      expect(page).to have_content('Michelle Obama')
     end
   end
 end
 
-
 describe 'a user' do
   context 'visting new page at new_student_path' do
     it 'can see the name of a single student' do
-      student = Student.create!(name: 'Emmie Hayes')
+      student_1 = Student.create!(name: 'Emmie Hayes')
+      student_2 = Student.create!(name: 'Michelle Obama')
 
-      visit student_path(student)
+      visit new_student_path
 
-      expect(page).to have_content(student.name)
+      click_link 'Create New Student'
+      expect(current_path).to eq(new_student_path)
+
+      click_link 'See All Students'
+      expect(current_path).to eq(students_path)
+      expect(page).to have_content('Emmie Hayes')
+      expect(page).to have_content('Michelle Obama')
     end
   end
 end
